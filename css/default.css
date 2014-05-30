@@ -1,0 +1,284 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #e2e2e2;
+  background-image: url('http://heyiming.wordpress.com/wp-content/themes/pub/zoren/images/body.png?m=1375425529g');
+  font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+#container {
+  background-color: #e2e2e2;
+  width: 90%;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+#site-title {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 7.6%;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #759B22;
+}
+
+#site-title > a:hover {
+  color: #1982d1;
+}
+
+#header-img {
+  margin: 0;
+}
+
+#nav {
+  background: linear-gradient(rgb(37, 37, 37), rgb(10, 10, 10)) repeat scroll 0% 0% transparent;
+  background: -webkit-linear-gradient(rgb(37, 37, 37), rgb(10, 10, 10)) repeat scroll 0% 0% transparent;
+  background: -ms-linear-gradient(rgb(37, 37, 37), rgb(10, 10, 10)) repeat scroll 0% 0% transparent;
+  float: left;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#nav-item {
+  padding-bottom: 10px;
+}
+
+.nav-item-list {
+  float: left;
+  padding-left: 15px;
+}
+
+.nav-item-list > a {
+  color: #B8B4B4;
+}
+
+.nav-item-list > a:hover {
+  color: #fff;
+}
+
+#blog-container {
+  width: 73%;
+  float: left;
+}
+
+#blog-list {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-item-head {
+  height: 50px;
+  font-family: inherit;
+  padding-top: 30px;
+  padding-left: 30px;
+  background-color: #F5F0F0;
+}
+
+.blog-item-pencil {
+  float: left;
+}
+
+.blog-item-author {
+  float: left;
+  margin-left: 7%;
+}
+
+.fa {
+  color: #666;
+}
+
+.author-link > a {
+  color: #759b22;
+  font-size: 100%;
+  padding-left: 22px;
+  line-height: 25px;
+}
+
+.clock-link > a {
+  color: #759b22;
+  font-size: 100%;
+  padding-left: 22px;
+  line-height: 25px;
+}
+
+.tag-link > a {
+  color: #759b22;
+  font-size: 100%;
+  padding-left: 28px;
+  line-height: 25px;
+}
+
+.comment-link > a {
+  color: #759b22;
+  font-size: 100%;
+  padding-left: 25px;
+  line-height: 25px;
+}
+
+.blog-item-clock {
+  float: left;
+  margin-left: 7%;
+}
+
+.blog-item-tags{
+  float: left;
+  margin-left: 7%;
+  width: 75px;
+}
+
+.blog-item-comment{
+  float: left;
+  margin-left: 7%;
+}
+
+.blog-item-info {
+  background-color: #fff;
+}
+
+.blog-item-title {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 2;
+  padding: 20px 40px 0 30px;
+  font-family: inherit;
+}
+
+.blog-item-title > a {
+  color: #242323;
+}
+
+.blog-item-description {
+  padding: 0 40px 20px 30px;
+  vertical-align: baseline;
+  color: rgb(65, 61, 61);
+  line-height: 1.6;
+}
+
+.blog-item-read {
+  padding: 0 40px 20px 30px;
+}
+
+.blog-item-divider {
+  width: 100%;
+  height: 20px;
+  background-color: #e2e2e2;
+  background-image: url('http://heyiming.wordpress.com/wp-content/themes/pub/zoren/images/body.png?m=1375425529g');
+}
+
+#aside {
+  float: right;
+  width: 25%;
+}
+
+.aside-item-title {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 700;
+  color: #242323;
+  background: #d0d0d0;
+}
+
+.aside-item-list {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0;
+  background-color: #fff;
+}
+
+.aside-item-list > li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.aside-item-list > li > a {
+  color: #666;
+}
+
+.aside-item-list > li > a:hover {
+  color: #759B22;
+}
+
+.aside-images-list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.likes-item-description {
+  border-left: 2px solid #EB6C6C;
+}
+
+.likes-item-description > p {
+  padding-left: 9px;
+  color: #666;
+}
+
+.likes-item-image {
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+.likes-item-title {
+  padding-bottom: 3px;
+  padding-top: 15px;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.pager .previous > a {
+  float: left;
+}
+
+.pager li > a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  color: #428bca;
+  text-decoration: none;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover {
+  color: #999;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+.pager li > a {
+  text-decoration: none;
+}
+
+.pager li > a:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.pager .next > a {
+  float: right; 
+}
+
+.footer {
+  margin-top: 120px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+  color: #666;
+}

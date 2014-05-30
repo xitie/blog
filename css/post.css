@@ -1,0 +1,128 @@
+.article-container {
+  width: 73%;
+  float: left;
+}
+
+.blog-item-content {
+  padding-left: 30px;
+  padding-right: 30px;
+  vertical-align: baseline;
+  color: rgb(65, 61, 61);
+  line-height: 1.6;
+} 
+
+p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+h3 {
+  margin: 7px 0 7px 0;
+}
+
+.blog-padding-bottom {
+  padding-bottom: 30px;
+}
+
+.blog-margin-bottom {
+  margin-bottom: 40px;
+}
+
+.blog-item-content > p > span {
+  color: #759b22;
+}
+
+.share {
+  margin-top: 30px;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+
+#comment {
+  border-top: 1px solid #ddd;
+}
+
+.notice {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.notice-text {
+  padding-left: 30px;  
+}
+
+.previous-article {
+  float: right;
+}
+
+.next-article {
+  float: left;
+}
+
+/* code heighlight*/
+.prettyprint,
+pre.prettyprint {
+  background-color: #002b36;
+  border: 1px solid #272822;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.prettyprint.linenums,
+pre.prettyprint.linenums {
+  background-color: #002b36;
+}
+
+.prettyprint.linenums ol,
+pre.prettyprint.linenums ol {
+  margin: 0 0 0 0; 
+}
+
+.prettyprint.linenums ol li,
+pre.prettyprint.linenums ol li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  margin-left: 0;
+  list-style: decimal;
+}
+
+.prettyprint .com { color: #93a1a1; }
+.prettyprint .lit { color: #AE81FF; }
+.prettyprint .pun,
+.prettyprint .opn, 
+.prettyprint .clo { color: #F8F8F2; }
+.prettyprint .fun { color: #dc322f; }
+.prettyprint .str, 
+.prettyprint .atv { color: #E6DB74; }
+.prettyprint .kwd, 
+.prettyprint .tag { color: #F92659; }
+.prettyprint .typ, 
+.prettyprint .atn, 
+.prettyprint .dec, 
+.prettyprint .var { color: #A6E22E; }
+.prettyprint .pln { color: #66D9EF; }
+
+.prettyprint, pre.prettyprint {
+  border: 1px solid #272822;
+  overflow: hidden;
+  padding: 8px;
+}
+
+pre {
+  border-radius: 3px;
+  background-size: auto 40px;
+  background-color: #39382E;
+  font-family: monospace,"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 13px;
+}
+
+pre > ol > li {
+  border-left: 1px solid #8F8F8F;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Ethan Blog</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/css/post.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+
+    <!--for fancybox-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!--for code pretty-->
+    <script type="text/javascript" src="{{ site.url }}/js/prettify.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+        window.prettyPrint && prettyPrint();
+      });
+    </script>
+
+    <!--for scroll to comment-->
+    <script language="javascript">  
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>  
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1 id="site-title"><a href="/">Ethan Blog</a></h1>
+      </div>
+      <div id="header-img">
+        <img src="/images/head.jpg" width=100% height="288"> 
+      </div>
+      <div id="nav">
+        <ul id="nav-item">
+          <li class="nav-item-list"><a href="/">Home</a></li>
+          <li class="nav-item-list"><a href="#">Archive</a></li>
+          <li class="nav-item-list"><a href="#">Works</a></li>
+          <li class="nav-item-list"><a href="#">Resume</a></li>
+          <li class="nav-item-list"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="article-container">
+        <div class="blog-info blog-margin-bottom"> 
+          <div class="blog-item-head">
+            <div class="blog-item-pencil">
+              <i class="fa fa-file-text fa-2x"></i>
+            </div>
+            <div class="blog-item-author">
+              <i class="fa fa-user">&nbsp;&nbsp;Author</i>
+              <div class="author-link">
+                <a href="/">Ethan</a>
+              </div> 
+            </div>
+            <div class="blog-item-clock">
+              <i class="fa fa-clock-o">&nbsp;&nbsp;Posted on</i>
+              <div class="clock-link">
+                <a href="/">{{ page.date | date_to_utc | date: '%Y-%m-%d' }}</a>
+              </div> 
+            </div>
+            <div class="blog-item-tags">
+              <i class="fa fa-tags">&nbsp;&nbsp;Tags</i>
+              <div class="tag-link">
+                <a href="/">{{ page.tags }}</a>
+              </div> 
+            </div>
+            <div class="blog-item-comment">
+              <i class="fa fa-comment">&nbsp;&nbsp;Comment</i>
+              <div class="comment-link">
+                <a href="{{ page.url }}#comment">Send comments</a>
+              </div> 
+            </div>
+          </div>
+          <div class="blog-item-info blog-padding-bottom">
+            <div class="blog-item-title"><a href="{{ page.url }}">{{ page.title }}</a></div>
+            <div class="blog-item-description">
+              {{ page.description }}
+            </div>
+            <div class="blog-item-content">
+
+              {{ content }}
+
+              {% include share.html %}
+              {% include disqus.html %}
+
+            </div>
+          </div>
+        </div>
+
+        <div class="next-article">
+          {% if page.next.url %} 
+            <a href="{{page.next.url}}">
+              &larr; {{page.next.title}}
+            </a> 
+          {% endif %} 
+        </div>
+
+        <div class="previous-article">
+          {% if page.previous.url %} 
+            <a href="{{page.previous.url}}">
+              {{page.previous.title}} &rarr;
+            </a> 
+          {% endif %} 
+        </div>
+
+        <footer class="footer">
+          Copyright &copy; 2014 Ethan Design credit: 
+          <a href="https://github.com/EthanZeng1992/ethanzeng1992.github.com">ethanzeng1992</a>
+        </footer>
+      </div>
+      <div id="aside">
+        <div class="aside-item">
+          <div class="aside-item-title">Recent Blogs</div>
+          <ul class="aside-item-list">
+            {% for post in site.posts limit:5 %}
+            <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="aside-item">
+          <div class="aside-item-title">Likes</div>
+          <div class="aside-item-list aside-images-list">
+            <div class="likes-item">
+              <div class="likes-item-title">
+                <a href="http://www.fa-d.com/project/weatherflow?full=1#img887">FA Design</a>
+              </div>
+              <div class="likes-item-description">
+                <p>an independent design studio</p>
+              </div>
+              <div class="likes-item-image">
+                <a href="http://www.fa-d.com/project/weatherflow?full=1#img887"><img src="/images/fa-d.jpg" width="100%" height="250px"/></a>
+              </div>
+            </div>
+            <div class="likes-item">
+              <div class="likes-item-title">
+                <a href="http://5m3d.com/">5M3D</a>
+              </div>
+              <div class="likes-item-description">
+                <p>html5 & css3</p>
+              </div>
+              <div class="likes-item-image">
+                <a href="http://5m3d.com/"><img src="/images/5m3d.png" width="100%" height="250px"/></a>
+              </div>
+            </div>
+            <div class="likes-item">
+              <div class="likes-item-title">
+                <a href="http://www.zippergaleria.com.br/en/">Zipper</a>
+              </div>
+              <div class="likes-item-description">
+                <p>a cool site</p>
+              </div>
+              <div class="likes-item-image">
+                <a href="http://www.zippergaleria.com.br/en/"><img src="/images/zipper.jpg" width="100%" height="250px"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
